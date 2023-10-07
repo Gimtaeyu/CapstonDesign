@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -103,7 +103,238 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Idle_Sword02-sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 186
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b14ac099da669d640b86c73d4800c263
+      internalID: 1967388854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Sword02-sheet_1
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 0
+        width: 186
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a39ae4d602d1a449ba9c0b665e41aec
+      internalID: 1752534433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Sword02-sheet_2
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 0
+        width: 186
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dc8ce48fa4eeed478a4146a401d86de
+      internalID: 1711660406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Sword02-sheet_3
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 0
+        width: 186
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78aa4e9db83da2740872e75e982f509b
+      internalID: 245754713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Sword02-sheet_4
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 0
+        width: 186
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e19f63f517ea0714b81e33f4a231aa76
+      internalID: -1154402134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Sword02-sheet_5
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 0
+        width: 186
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e9d0c2e82bfe1341bf69e94c1e9c38c
+      internalID: 1060414548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Sword02-sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 0
+        width: 186
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c57cf360fa5054241b4785fd4a1a76a7
+      internalID: -976853062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Sword02-sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 0
+        width: 186
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e88b56df16ff8d44b92762b766669e9
+      internalID: -849057802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Sword02-sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 0
+        width: 186
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 421a0cb50987b1443a9c6bfd2966ab0d
+      internalID: 1904173049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Sword02-sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 0
+        width: 186
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42d4eb237eca16b45a6054943e5355ce
+      internalID: 1176152297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_Sword02-sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 0
+        width: 186
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1436e2f53944201468f196315edd6220
+      internalID: -519106651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +345,18 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Idle_Sword02-sheet_0: 1967388854
+      Idle_Sword02-sheet_1: 1752534433
+      Idle_Sword02-sheet_10: -519106651
+      Idle_Sword02-sheet_2: 1711660406
+      Idle_Sword02-sheet_3: 245754713
+      Idle_Sword02-sheet_4: -1154402134
+      Idle_Sword02-sheet_5: 1060414548
+      Idle_Sword02-sheet_6: -976853062
+      Idle_Sword02-sheet_7: -849057802
+      Idle_Sword02-sheet_8: 1904173049
+      Idle_Sword02-sheet_9: 1176152297
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
