@@ -13,8 +13,12 @@ public class WeaponRange : MonoBehaviour
     public bool W_isatkOn;
     public float knockbackSpeed;
 
+    int attackCount;
+    Animator anim_attack;
+    
     void Start()
     {
+        attackCount = 2; 
         is_searchEnemy = false;
         knockbackSpeed = 5f;
         W_isatkOn = true;
@@ -24,7 +28,8 @@ public class WeaponRange : MonoBehaviour
             W_atk = 2.0f;
             W_cooltime = 1.0f;
         }
-        this.GetComponent<CircleCollider2D>().radius = W_Range_radius;
+        //this.GetComponent<PolygonCollider2D>().radius = W_Range_radius;
+        anim_attack = this.GetComponentInParent<Animator>();
     }
 
     void Update()
@@ -33,6 +38,7 @@ public class WeaponRange : MonoBehaviour
         if(W_cooltime < 0)
         {
             W_isatkOn = true;
+            attackCount = 2;
         }
         else
         {
@@ -46,6 +52,24 @@ public class WeaponRange : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             is_searchEnemy = true;
+            if (W_isatkOn)
+            {
+                
+                attackCount--;
+                Debug.Log(collision.name);
+                if (W_cooltime <= 0) //한번만 실행
+                {
+                    anim_attack.SetTrigger("isAttack");
+                    W_cooltime = 2.0f;
+                }
+                Vector2.Distance(this.transform.position, collision.transform.position);
+                if (attackCount == 0)
+                {
+                    W_isatkOn = false;
+                    
+                }
+            }
+           
             
         }
     }

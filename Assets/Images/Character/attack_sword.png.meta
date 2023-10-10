@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 89919147293bd4a42b5b085a5c03c4bc
+guid: bfbc9723fe111d443bd71ac2bb41f8f9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -101,17 +101,29 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sword_Bash_0
+      name: attack_sword_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 112
-        height: 78
+        width: 160
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42cfa0851038b6c47bbe849b5210ea43
-      internalID: -1073246069
+      spriteID: 4b93b9d34aac81d4d8322d055d2d5224
+      internalID: -1061921284
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword_Bash_1
+      name: attack_sword_1
       rect:
         serializedVersion: 2
-        x: 112
+        x: 160
         y: 0
-        width: 112
-        height: 78
+        width: 160
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c675446a2cd70ff459c25625bedd5553
-      internalID: 717991420
+      spriteID: c464432dd1a8a384296c56f9fef708a4
+      internalID: 336394300
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword_Bash_2
+      name: attack_sword_2
       rect:
         serializedVersion: 2
-        x: 224
+        x: 320
         y: 0
-        width: 112
-        height: 78
+        width: 160
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96d3ffb582828044c99b45b6023363d7
-      internalID: 1068993697
+      spriteID: 481b9968c7ec7ee4e88e61cbf7838c95
+      internalID: 2029755921
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword_Bash_3
+      name: attack_sword_3
       rect:
         serializedVersion: 2
-        x: 336
+        x: 480
         y: 0
-        width: 112
-        height: 78
+        width: 160
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,20 +194,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a868004abf685242be12131183991bd
-      internalID: 69020171
+      spriteID: 62a96ec0e0af30142bd4e4fa25d39b80
+      internalID: 2006054136
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword_Bash_4
+      name: attack_sword_4
       rect:
         serializedVersion: 2
-        x: 448
+        x: 640
         y: 0
-        width: 112
-        height: 78
+        width: 160
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,20 +215,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 236f3094c597e4c4cab64390c10940cc
-      internalID: 21186262
+      spriteID: 9fd81517ce1e90847a98344ec8436ab6
+      internalID: 523206502
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sword_Bash_5
+      name: attack_sword_5
       rect:
         serializedVersion: 2
-        x: 560
+        x: 800
         y: 0
-        width: 112
-        height: 78
+        width: 160
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,8 +236,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34c90427adc90ae42812e656a2897040
-      internalID: -1679560203
+      spriteID: 765bd47cfd971294e9168fa3de68113b
+      internalID: -1881082385
       vertices: []
       indices: 
       edges: []
@@ -241,12 +253,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sword_Bash_0: -1073246069
-      Sword_Bash_1: 717991420
-      Sword_Bash_2: 1068993697
-      Sword_Bash_3: 69020171
-      Sword_Bash_4: 21186262
-      Sword_Bash_5: -1679560203
+      attack_sword_1: 336394300
+      attack_sword_0: -1061921284
+      attack_sword_3: 2006054136
+      attack_sword_4: 523206502
+      attack_sword_2: 2029755921
+      attack_sword_5: -1881082385
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

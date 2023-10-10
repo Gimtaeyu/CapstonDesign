@@ -11,10 +11,12 @@ public class EnemyMove : MonoBehaviour
     private float e_HP;
     Rigidbody2D rBody2D;
     Vector3 test;
+    bool isAttacked;
 
     void Start()
     {
-        rBody2D = this.GetComponent<Rigidbody2D>();
+        isAttacked = false;
+           rBody2D = this.GetComponent<Rigidbody2D>();
         target = GameObject.FindWithTag("Player").transform;
         e_speed2 = 4f;
         e_HP = 10.0f;
@@ -43,18 +45,22 @@ public class EnemyMove : MonoBehaviour
         {
             if (collision.tag == "Weapon")
             {
-                collision.GetComponent<WeaponRange>().W_cooltime = 1.0f;
-                collision.GetComponent<WeaponRange>().W_isatkOn = false;
-                e_HP -= collision.GetComponent<WeaponRange>().W_atk;
-                StartCoroutine(KnockbackRoutine(collision.GetComponent<WeaponRange>().knockbackSpeed));
+                if (!isAttacked)
+                {
+                    isAttacked = true;
+                    e_HP -= collision.GetComponent<WeaponRange>().W_atk;
+                    StartCoroutine(KnockbackRoutine(collision.GetComponent<WeaponRange>().knockbackSpeed));
+                }
             }
         }
     }
 
     protected IEnumerator KnockbackRoutine(float knockbackSpeed)
     {
-        this.knockbackSpeed = -knockbackSpeed;
+        this.knockbackSpeed = -knockbackSpeed * 1.5f ;
         yield return new WaitForSeconds(0.1f);
         this.knockbackSpeed = 1f;
+        yield return new WaitForSeconds(0.1f);
+        isAttacked = false;
     }
 }
