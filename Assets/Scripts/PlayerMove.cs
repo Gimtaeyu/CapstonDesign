@@ -39,7 +39,6 @@ public class PlayerMove : MonoBehaviour
         Player_Skill();
     }
 
-
     private void Player_Skill()
     {
         if(Input.GetKeyDown("a"))
@@ -86,13 +85,15 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             hInput = -1;
-            this.GetComponent<SpriteRenderer>().flipX = false;
+            //this.GetComponent<SpriteRenderer>().flipX = false;
+            this.transform.rotation = Quaternion.Euler(0, 0, 0);
             anim.SetBool("isMoving", true);
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
             hInput = 1;
-            this.GetComponent<SpriteRenderer>().flipX = true;
+            //this.GetComponent<SpriteRenderer>().flipX = true;
+            this.transform.rotation = Quaternion.Euler(0, 180, 0);
             anim.SetBool("isMoving", true);
         }
         else
@@ -126,4 +127,41 @@ public class PlayerMove : MonoBehaviour
 
         rigid.velocity = moveVec * speed;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.layer == 6) //Drop
+        {
+            for(int i = 1; i < 4; i++)
+            {
+                if (collision.gameObject.name.Contains("" + i + ""))
+                {
+                    int tempInt = PlayerPrefs.GetInt("Drop_" + i + "");
+                    PlayerPrefs.SetInt("Drop_" + i + "", ++tempInt);
+
+                    Debug.Log(PlayerPrefs.GetInt("Drop_" + i + ""));
+
+                    Destroy(collision.gameObject);
+                }
+            }
+
+           //if(collision.gameObject.name.Contains("1"))
+           //{
+           //    int tempInt = PlayerPrefs.GetInt("Drop_1");
+           //    PlayerPrefs.SetInt("Drop_1", tempInt++);
+           //}
+           //else if(collision.gameObject.name.Contains("2"))
+           //{
+           //    int tempInt = PlayerPrefs.GetInt("Drop_2");
+           //    PlayerPrefs.SetInt("Drop_2", tempInt++);
+           //}
+           //else if (collision.gameObject.name.Contains("3"))
+           //{
+           //    int tempInt = PlayerPrefs.GetInt("Drop_3");
+           //    PlayerPrefs.SetInt("Drop_3", tempInt++);
+           //}
+        }
+    }
+
+
 }

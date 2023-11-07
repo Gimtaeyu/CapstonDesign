@@ -8,65 +8,71 @@ public class WeaponRange : MonoBehaviour
     
     private int W_number;
     private float W_Range_radius;
-    public float W_atk;
+
+    public float W_atkDamage;
     public float W_cooltime;
+
     public bool W_isatkOn;
     public float knockbackSpeed;
 
-    int attackCount;
+    public int attackCount;
     Animator anim_attack;
     
     void Start()
     {
-        attackCount = 2; 
+        attackCount = 3; 
         is_searchEnemy = false;
         knockbackSpeed = 5f;
         W_isatkOn = true;
         if (W_number == 0)
         {
             W_Range_radius = 1.5f;
-            W_atk = 2.0f;
+            W_atkDamage = 5.0f;
             W_cooltime = 1.0f;
         }
-        //this.GetComponent<PolygonCollider2D>().radius = W_Range_radius;
         anim_attack = this.GetComponentInParent<Animator>();
     }
 
     void Update()
     {
-        
-        if(W_cooltime < 0)
+        if (anim_attack.GetCurrentAnimatorStateInfo(0).IsName("Attack_Sword") &&
+           anim_attack.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.3f)
+        {
+            W_isatkOn = false;
+        }
+
+        if (W_cooltime < 0)
         {
             W_isatkOn = true;
-            attackCount = 2;
+            attackCount = 3;
         }
         else
         {
             W_cooltime -= Time.deltaTime;
         }
-
+       
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            is_searchEnemy = true;
             if (W_isatkOn)
             {
-                
-                attackCount--;
-                Debug.Log(collision.name);
-                if (W_cooltime <= 0) //한번만 실행
+                if (attackCount > 0)
                 {
-                    anim_attack.SetTrigger("isAttack");
-                    W_cooltime = 2.0f;
+                    if (W_cooltime <= 0) //한번만 실행
+                    {
+                        anim_attack.SetTrigger("isAttack");
+                        W_cooltime = 2.0f;
+                    }
+
+
+
                 }
-                Vector2.Distance(this.transform.position, collision.transform.position);
-                if (attackCount == 0)
+                else
                 {
                     W_isatkOn = false;
-                    
                 }
             }
            
@@ -77,7 +83,6 @@ public class WeaponRange : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            is_searchEnemy = false;
         }
     }
 
