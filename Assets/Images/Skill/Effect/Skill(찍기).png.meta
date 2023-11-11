@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 000892577bdafff43a83cb761e006770
+guid: 4933425dbbdb3854f82a4d0cf6beffee
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 28.5
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BackGround(Main)1-sheet_0
+      name: "Skill(\uCC0D\uAE30)_0"
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 512
-        height: 288
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61fccce5578badd4684cb80e6c05b959
-      internalID: -1700928493
+      spriteID: ce8029a87c0ec6a4eab1eb47762dc180
+      internalID: -894255750
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BackGround(Main)1-sheet_1
+      name: "Skill(\uCC0D\uAE30)_1"
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aac47d8c9f82044eab119d551030c1d
+      internalID: 1948107934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Skill(\uCC0D\uAE30)_2"
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 845e247b488060646b6842e6a122dfb1
+      internalID: -1815533032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Skill(\uCC0D\uAE30)_3"
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e086d6d2c447924685dc201f880775f
+      internalID: 1063384706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Skill(\uCC0D\uAE30)_4"
       rect:
         serializedVersion: 2
         x: 512
         y: 0
-        width: 512
-        height: 288
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +203,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ec03fb4361634841874137608beac6b
-      internalID: 392231298
+      spriteID: e4a7ce99f719d6740ac035fc7c924c8e
+      internalID: 1143977110
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BackGround(Main)1-sheet_2
+      name: "Skill(\uCC0D\uAE30)_5"
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80a7f903f7023924993960f1235d59e9
+      internalID: -1429935432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Skill(\uCC0D\uAE30)_6"
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6586f1f4c48531648944151313788832
+      internalID: -1263501317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Skill(\uCC0D\uAE30)_7"
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b29b56cb6ce6e43459b968ee13dc674b
+      internalID: 2010509937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Skill(\uCC0D\uAE30)_8"
       rect:
         serializedVersion: 2
         x: 1024
         y: 0
-        width: 512
-        height: 288
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +287,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01968ca9b21d8cb489edca4403804760
-      internalID: 424381899
+      spriteID: 4b666eceb88adf74c900a4c89c8155d1
+      internalID: 1129995194
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BackGround(Main)1-sheet_3
+      name: "Skill(\uCC0D\uAE30)_9"
       rect:
         serializedVersion: 2
-        x: 1536
+        x: 1152
         y: 0
-        width: 512
-        height: 288
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,20 +308,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb54fd2deef0c8343a55d01c026084ba
-      internalID: -1104641166
+      spriteID: b36a324313f8b80439051067e123ae32
+      internalID: -1438857025
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BackGround(Main)1-sheet_4
+      name: "Skill(\uCC0D\uAE30)_10"
       rect:
         serializedVersion: 2
-        x: 2048
+        x: 1280
         y: 0
-        width: 512
-        height: 288
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,20 +329,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 658c305584d842544a6564f4c0504249
-      internalID: 1133683070
+      spriteID: d0aeba7ef6712c047871d4882eaf0aa4
+      internalID: -1378420457
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BackGround(Main)1-sheet_5
+      name: "Skill(\uCC0D\uAE30)_11"
       rect:
         serializedVersion: 2
-        x: 2560
+        x: 1408
         y: 0
-        width: 512
-        height: 288
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,71 +350,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7acba04ab14e2d41a5a2c00d5b9975d
-      internalID: 1991953908
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BackGround(Main)1-sheet_6
-      rect:
-        serializedVersion: 2
-        x: 3072
-        y: 0
-        width: 512
-        height: 288
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ef42a0b6b4a1eca43acb92b51c8384fc
-      internalID: 502198563
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BackGround(Main)1-sheet_7
-      rect:
-        serializedVersion: 2
-        x: 3584
-        y: 0
-        width: 512
-        height: 288
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4a997948f9c384f4b88ab85ba59ff774
-      internalID: 552162094
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BackGround(Main)1-sheet_8
-      rect:
-        serializedVersion: 2
-        x: 4096
-        y: 0
-        width: 512
-        height: 288
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6e09b54106be56b49920768f4776c4b5
-      internalID: 2082579927
+      spriteID: 59beec2219d583e4faf483c9e84160a2
+      internalID: 1758531181
       vertices: []
       indices: 
       edges: []
@@ -304,15 +367,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BackGround(Main)1-sheet_3: -1104641166
-      BackGround(Main)1-sheet_6: 502198563
-      BackGround(Main)1-sheet_8: 2082579927
-      BackGround(Main)1-sheet_1: 392231298
-      BackGround(Main)1-sheet_7: 552162094
-      BackGround(Main)1-sheet_2: 424381899
-      BackGround(Main)1-sheet_5: 1991953908
-      BackGround(Main)1-sheet_0: -1700928493
-      BackGround(Main)1-sheet_4: 1133683070
+      "Skill(\uCC0D\uAE30)_10": -1378420457
+      "Skill(\uCC0D\uAE30)_6": -1263501317
+      "Skill(\uCC0D\uAE30)_4": 1143977110
+      "Skill(\uCC0D\uAE30)_11": 1758531181
+      "Skill(\uCC0D\uAE30)_2": -1815533032
+      "Skill(\uCC0D\uAE30)_5": -1429935432
+      "Skill(\uCC0D\uAE30)_0": -894255750
+      "Skill(\uCC0D\uAE30)_3": 1063384706
+      "Skill(\uCC0D\uAE30)_9": -1438857025
+      "Skill(\uCC0D\uAE30)_1": 1948107934
+      "Skill(\uCC0D\uAE30)_8": 1129995194
+      "Skill(\uCC0D\uAE30)_7": 2010509937
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

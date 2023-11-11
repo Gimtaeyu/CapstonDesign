@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 000892577bdafff43a83cb761e006770
+guid: 073d4074cd9fa5241bbaee831b83334a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 28.5
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BackGround(Main)1-sheet_0
+      name: drone_explode_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 512
-        height: 288
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61fccce5578badd4684cb80e6c05b959
-      internalID: -1700928493
+      spriteID: ed716dbf3b9271f4391e61a1305c6ad3
+      internalID: 1282811641
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BackGround(Main)1-sheet_1
+      name: drone_explode_1
       rect:
         serializedVersion: 2
-        x: 512
+        x: 64
         y: 0
-        width: 512
-        height: 288
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ec03fb4361634841874137608beac6b
-      internalID: 392231298
+      spriteID: a1e20fc5ef5029846a4b8a84225b7d64
+      internalID: 834516080
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BackGround(Main)1-sheet_2
+      name: drone_explode_2
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 128
         y: 0
-        width: 512
-        height: 288
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01968ca9b21d8cb489edca4403804760
-      internalID: 424381899
+      spriteID: eada01954131bef4d8553aa7cfdae96c
+      internalID: -1565445353
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BackGround(Main)1-sheet_3
+      name: drone_explode_3
       rect:
         serializedVersion: 2
-        x: 1536
+        x: 192
         y: 0
-        width: 512
-        height: 288
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb54fd2deef0c8343a55d01c026084ba
-      internalID: -1104641166
+      spriteID: 2464c6cb2cbc30a4aa2ed1a26ab51e44
+      internalID: -117621684
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BackGround(Main)1-sheet_4
+      name: drone_explode_4
       rect:
         serializedVersion: 2
-        x: 2048
+        x: 256
         y: 0
-        width: 512
-        height: 288
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 658c305584d842544a6564f4c0504249
-      internalID: 1133683070
+      spriteID: 5ab258f40f888804b9ad57f263b207bd
+      internalID: -403638728
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BackGround(Main)1-sheet_5
+      name: drone_explode_5
       rect:
         serializedVersion: 2
-        x: 2560
+        x: 320
         y: 0
-        width: 512
-        height: 288
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,20 +224,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7acba04ab14e2d41a5a2c00d5b9975d
-      internalID: 1991953908
+      spriteID: 1c769ba31f5ec934992566450e5f3feb
+      internalID: -2125189775
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BackGround(Main)1-sheet_6
+      name: drone_explode_6
       rect:
         serializedVersion: 2
-        x: 3072
+        x: 384
         y: 0
-        width: 512
-        height: 288
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,20 +245,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef42a0b6b4a1eca43acb92b51c8384fc
-      internalID: 502198563
+      spriteID: 58e58925b7fc70f4f9c566ec0ed0377f
+      internalID: 519794921
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BackGround(Main)1-sheet_7
+      name: drone_explode_7
       rect:
         serializedVersion: 2
-        x: 3584
+        x: 448
         y: 0
-        width: 512
-        height: 288
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -266,29 +266,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a997948f9c384f4b88ab85ba59ff774
-      internalID: 552162094
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BackGround(Main)1-sheet_8
-      rect:
-        serializedVersion: 2
-        x: 4096
-        y: 0
-        width: 512
-        height: 288
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6e09b54106be56b49920768f4776c4b5
-      internalID: 2082579927
+      spriteID: 9bc046824f60544438508a63585cf0e5
+      internalID: -845096253
       vertices: []
       indices: 
       edges: []
@@ -304,15 +283,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BackGround(Main)1-sheet_3: -1104641166
-      BackGround(Main)1-sheet_6: 502198563
-      BackGround(Main)1-sheet_8: 2082579927
-      BackGround(Main)1-sheet_1: 392231298
-      BackGround(Main)1-sheet_7: 552162094
-      BackGround(Main)1-sheet_2: 424381899
-      BackGround(Main)1-sheet_5: 1991953908
-      BackGround(Main)1-sheet_0: -1700928493
-      BackGround(Main)1-sheet_4: 1133683070
+      drone_explode_0: 1282811641
+      drone_explode_3: -117621684
+      drone_explode_4: -403638728
+      drone_explode_7: -845096253
+      drone_explode_5: -2125189775
+      drone_explode_2: -1565445353
+      drone_explode_1: 834516080
+      drone_explode_6: 519794921
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
