@@ -212,7 +212,7 @@ GameObject:
   - component: {fileID: 75543965}
   - component: {fileID: 75543964}
   m_Layer: 5
-  m_Name: Button (Legacy) (2)
+  m_Name: Speed_btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -282,7 +282,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 75543965}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 698119930}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Inhence_Speed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &75543965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -576,7 +588,7 @@ GameObject:
   - component: {fileID: 231494658}
   - component: {fileID: 231494657}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: AtkLevel_txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -635,7 +647,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: 0
 --- !u!222 &231494658
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -849,6 +861,7 @@ MonoBehaviour:
   - {fileID: 96356908}
   - {fileID: 1786700130}
   - {fileID: 275077337}
+  Status_DB: {fileID: 11400000, guid: f3e495e6fb158fb4a84d7ce06dc7f935, type: 2}
 --- !u!50 &374188874
 Rigidbody2D:
   serializedVersion: 4
@@ -1532,7 +1545,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &681965052
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1639,6 +1652,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   money_txt: {fileID: 676134854}
+  atkLevel_txt: {fileID: 231494657}
+  hpLevel_txt: {fileID: 1937904069}
+  speedLevel_txt: {fileID: 1151682141}
   Option_BG: {fileID: 1609608759}
   Upgrade_BG: {fileID: 681965051}
 --- !u!1 &704321612
@@ -1737,7 +1753,7 @@ GameObject:
   - component: {fileID: 914627280}
   - component: {fileID: 914627279}
   m_Layer: 5
-  m_Name: Button (Legacy)
+  m_Name: Atk_btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1807,7 +1823,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 914627280}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 698119930}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Inhence_Attack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &914627280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2014,7 +2042,7 @@ GameObject:
   - component: {fileID: 1151682142}
   - component: {fileID: 1151682141}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: SpeedLevel_txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2073,7 +2101,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: 0
 --- !u!222 &1151682142
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2593,7 +2621,7 @@ GameObject:
   - component: {fileID: 1937904070}
   - component: {fileID: 1937904069}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: HpLevel_txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2652,7 +2680,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: 0
 --- !u!222 &1937904070
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3068,7 +3096,7 @@ GameObject:
   - component: {fileID: 2073843607}
   - component: {fileID: 2073843606}
   m_Layer: 5
-  m_Name: Button (Legacy) (1)
+  m_Name: Hp_btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3138,7 +3166,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2073843607}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 698119930}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Inhence_Hp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2073843607
 MonoBehaviour:
   m_ObjectHideFlags: 0

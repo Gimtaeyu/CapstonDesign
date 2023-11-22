@@ -17,6 +17,20 @@ public class PlayerMove : MonoBehaviour
     float[] maxValue = new float[4];
     float[] curValue = new float[4];
 
+    public bool called_Inhence;
+
+    //DB
+    public Player_Status Status_DB;
+    List<Player_DB_Entity> status;
+
+    private void Awake()
+    {
+        status = Status_DB.Status;
+
+        anim = this.GetComponent<Animator>();
+        rigid = this.GetComponent<Rigidbody2D>();
+    }
+
     void Start()
     {
         maxValue[0] = 1.0f; //A스킬 쿨타임 조정
@@ -24,9 +38,11 @@ public class PlayerMove : MonoBehaviour
         maxValue[2] = 10.0f; //D스킬 쿨타임 조정
         maxValue[3] = 50.0f; //F스킬 쿨타임 조정
 
-        anim = this.GetComponent<Animator>();
-        rigid = this.GetComponent<Rigidbody2D>();
-        speed = 5.0f;
+        called_Inhence = false; 
+
+        speed = 5.0f + status[PlayerPrefs.GetInt("Speed_Level")].Inhence_Speed;
+
+
         for (int i = 0; i <skill_ui.Length; i++)
         {
             skill_ui[i].value = 1.0f;
@@ -37,6 +53,12 @@ public class PlayerMove : MonoBehaviour
     {
         Player_Move();
         Player_Skill();
+        if(called_Inhence)
+        {
+
+            speed = 5.0f + status[PlayerPrefs.GetInt("Speed_Level")].Inhence_Speed;
+            called_Inhence = false;
+        }
     }
 
     private void Player_Skill()
@@ -74,8 +96,6 @@ public class PlayerMove : MonoBehaviour
             curValue[i] += Time.deltaTime;
             skill_ui[i].value = curValue[i] / maxValue[i];
         }
-
-
 
     }
 
