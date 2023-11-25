@@ -15,17 +15,20 @@ public class EnemyMove : MonoBehaviour
 
     //드랍재료
     public GameObject[] drop_Material;
+
+    Animator anim;
     
 
     void Start()
     {
         isAttacked = false;
-           rBody2D = this.GetComponent<Rigidbody2D>();
+        rBody2D = this.GetComponent<Rigidbody2D>();
         target = GameObject.FindWithTag("Player").transform;
         e_speed2 = 3.5f;
         e_HP = 10.0f;
         knockbackSpeed = 1f;
 
+        anim = this.GetComponent<Animator>();
     }
 
     void Update()
@@ -33,10 +36,21 @@ public class EnemyMove : MonoBehaviour
         //transform.position = Vector3.MoveTowards(transform.position, target.position, e_speed2 * Time.deltaTime);
         if(e_HP <= 0)
         {
-            PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money") + 50);
-            GameManager.is_renewMoney = true;
-            Instantiate(drop_Material[0], transform.position, Quaternion.identity);
-            Destroy(this.gameObject);
+            Debug.Log("뒤져라");
+            this.GetComponent<CircleCollider2D>().enabled = false;
+            e_speed2 = 0;
+            anim.SetTrigger("isDead");
+           
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("enemy_dead") == true &&
+                anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.95f)
+            {
+                PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money") + 50);
+                GameManager.is_renewMoney = true;
+                Instantiate(drop_Material[0], transform.position, Quaternion.identity);
+
+
+                Destroy(this.gameObject);
+            }
         }
        
         dir = target.position - transform.position;
@@ -51,7 +65,10 @@ public class EnemyMove : MonoBehaviour
             this.transform.rotation = Quaternion.Euler(0, 180, 0);
         }
 
-        this.rBody2D.velocity = this.dir.normalized * e_speed2 * knockbackSpeed;
+
+       this.rBody2D.velocity = this.dir.normalized * e_speed2 * knockbackSpeed;
+
+        
     }
 
     private void OnTriggerStay2D(Collider2D collision)
