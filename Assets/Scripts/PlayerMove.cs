@@ -6,18 +6,18 @@ using UnityEngine.UI;
 public class PlayerMove : MonoBehaviour
 {
     public float speed;
+    public float curHp;
+
+
     Rigidbody2D rigid;
     float hInput;
     float vInput;
     Vector2 moveVec;
 
     private Animator anim;
-
-    public Slider[] skill_ui;
-    float[] maxValue = new float[4];
-    float[] curValue = new float[4];
-
+    
     public bool called_Inhence;
+
 
     //DB
     public Player_Status Status_DB;
@@ -25,6 +25,7 @@ public class PlayerMove : MonoBehaviour
 
     private void Awake()
     {
+        curHp = 100;
         status = Status_DB.Status;
 
         anim = this.GetComponent<Animator>();
@@ -32,72 +33,28 @@ public class PlayerMove : MonoBehaviour
     }
 
     void Start()
-    {
-        maxValue[0] = 1.0f; //A스킬 쿨타임 조정
-        maxValue[1] = 5.0f; //S스킬 쿨타임 조정
-        maxValue[2] = 10.0f; //D스킬 쿨타임 조정
-        maxValue[3] = 50.0f; //F스킬 쿨타임 조정
-
+    {      
         called_Inhence = false; 
 
         speed = 5.0f + status[PlayerPrefs.GetInt("Speed_Level")].Inhence_Speed;
 
 
-        for (int i = 0; i <skill_ui.Length; i++)
-        {
-            skill_ui[i].value = 1.0f;
-        }
     }
 
     void Update()
     {
         Player_Move();
-        Player_Skill();
+
+
+
         if(called_Inhence)
         {
-
             speed = 5.0f + status[PlayerPrefs.GetInt("Speed_Level")].Inhence_Speed;
             called_Inhence = false;
         }
     }
 
-    private void Player_Skill()
-    {
-        if(Input.GetKeyDown("a"))
-        {
-            if(skill_ui[0].value == 1)
-            {
-                curValue[0] = 0.0f;
-            }
-        }
-        if (Input.GetKeyDown("s"))
-        {
-            if (skill_ui[1].value == 1)
-            {
-                curValue[1] = 0.0f;
-            }
-        }
-        if (Input.GetKeyDown("d"))
-        {
-            if (skill_ui[2].value == 1)
-            {
-                curValue[2] = 0.0f;
-            }
-        }
-        if (Input.GetKeyDown("f"))
-        {
-            if (skill_ui[3].value == 1)
-            {
-                curValue[3] = 0.0f;
-            }
-        }
-       for(int i =0; i <skill_ui.Length; i++)
-        {
-            curValue[i] += Time.deltaTime;
-            skill_ui[i].value = curValue[i] / maxValue[i];
-        }
-
-    }
+  
 
 
     private void Player_Move()
@@ -181,6 +138,12 @@ public class PlayerMove : MonoBehaviour
            //    PlayerPrefs.SetInt("Drop_3", tempInt++);
            //}
         }
+
+        if(collision.gameObject.tag == "Enemy")
+        {
+            curHp--;
+        }
+
     }
 
 
