@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 299d4dc304c66a04d8e5faee9f679f5e
+guid: 0018460d80d307b40aa2b68390a4eb73
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -69,7 +69,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -101,17 +101,29 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Skill(\uB808\uD22C\uB2E4)-sheet_0"
+      name: ReadToDie_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 128
+        width: 80
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 432a12ede6b7b1c4f969004f4f6bf5aa
-      internalID: 660635725
+      spriteID: a2cdd592e8221a744899f5e9b571b646
+      internalID: 1841778051
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Skill(\uB808\uD22C\uB2E4)-sheet_1"
+      name: ReadToDie_1
       rect:
         serializedVersion: 2
-        x: 128
+        x: 80
         y: 0
-        width: 128
-        height: 128
+        width: 80
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f2769120e0a8434695bb1ad5b5ab4db
-      internalID: 734561765
+      spriteID: 5cc1e34d14f1ff64ea31f05d338b1ae0
+      internalID: -670137691
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Skill(\uB808\uD22C\uB2E4)-sheet_2"
+      name: ReadToDie_2
       rect:
         serializedVersion: 2
-        x: 256
+        x: 160
         y: 0
-        width: 128
-        height: 128
+        width: 80
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c010857a034bca4bbf8f8156239e7cd
-      internalID: -954855160
+      spriteID: f6491a690af4f3741a93ab9a266647ea
+      internalID: 1227181228
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Skill(\uB808\uD22C\uB2E4)-sheet_3"
+      name: ReadToDie_3
       rect:
         serializedVersion: 2
-        x: 384
+        x: 240
         y: 0
-        width: 128
-        height: 128
+        width: 80
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,20 +194,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7564ad299230de44a402a60fde1bf29
-      internalID: 1779293393
+      spriteID: 8dd13827cdd8c2347b656335e8f6959d
+      internalID: -1001909495
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Skill(\uB808\uD22C\uB2E4)-sheet_4"
+      name: ReadToDie_4
       rect:
         serializedVersion: 2
-        x: 512
+        x: 320
         y: 0
-        width: 128
-        height: 128
+        width: 80
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,20 +215,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2589f9a2581b6b40a0a5e26a546697f
-      internalID: 1608382847
+      spriteID: 7349994a16dd8794c8b4936b33416aef
+      internalID: 418392037
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Skill(\uB808\uD22C\uB2E4)-sheet_5"
+      name: ReadToDie_5
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 80
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0060c42cf3ce7042a227458d143aab2
+      internalID: 1740620480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReadToDie_6
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 80
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1b0ea8d5e560f040aae9113c946498d
+      internalID: -1732683827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReadToDie_7
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 0
+        width: 80
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e32accc518d44646a89f0eb029276b2
+      internalID: 1512424229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReadToDie_8
       rect:
         serializedVersion: 2
         x: 640
         y: 0
-        width: 128
-        height: 128
+        width: 80
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,20 +299,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57fffd5b1a193d34c8f357d1f3fc2bf0
-      internalID: -1092047789
+      spriteID: d9600412ffebf5e40b730f2e0bd16c0d
+      internalID: -1560729130
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Skill(\uB808\uD22C\uB2E4)-sheet_6"
+      name: ReadToDie_9
       rect:
         serializedVersion: 2
-        x: 768
+        x: 720
         y: 0
-        width: 128
-        height: 128
+        width: 80
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,197 +320,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 854b236cdf0261747a6545da304d7f08
-      internalID: 1403200685
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Skill(\uB808\uD22C\uB2E4)-sheet_7"
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7721658e8e41e3d4c8e598323bc8140e
-      internalID: -1595012420
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Skill(\uB808\uD22C\uB2E4)-sheet_8"
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1d9e9517f4c71504abc7448f6b581261
-      internalID: -1440837914
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Skill(\uB808\uD22C\uB2E4)-sheet_9"
-      rect:
-        serializedVersion: 2
-        x: 1152
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a31cd7c6f1903254ab4c33361c6c16c1
-      internalID: -1524913194
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Skill(\uB808\uD22C\uB2E4)-sheet_10"
-      rect:
-        serializedVersion: 2
-        x: 1280
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6ac5e703de4a60b4cafeeffb582c5fea
-      internalID: -1545766902
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Skill(\uB808\uD22C\uB2E4)-sheet_11"
-      rect:
-        serializedVersion: 2
-        x: 1408
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b23bbe190ce16fc4dba2b7c47e8a1f64
-      internalID: 581719777
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Skill(\uB808\uD22C\uB2E4)-sheet_12"
-      rect:
-        serializedVersion: 2
-        x: 1536
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0213a9cf59ebfe74c8f6eacd72c1965b
-      internalID: -509603266
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Skill(\uB808\uD22C\uB2E4)-sheet_13"
-      rect:
-        serializedVersion: 2
-        x: 1664
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dd746736599f57c4f964211dac632fd3
-      internalID: 1771595789
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Skill(\uB808\uD22C\uB2E4)-sheet_14"
-      rect:
-        serializedVersion: 2
-        x: 1792
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 75bb6ee715f9b574a9a8bce2263551bc
-      internalID: -1479693142
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Skill(\uB808\uD22C\uB2E4)-sheet_15"
-      rect:
-        serializedVersion: 2
-        x: 1920
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b738ce11e2d7cda43a7349a4663870ab
-      internalID: -681270016
+      spriteID: 0931ba422ba89cd4291aecb15728fc6e
+      internalID: 402101437
       vertices: []
       indices: 
       edges: []
@@ -451,22 +337,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "Skill(\uB808\uD22C\uB2E4)-sheet_14": -1479693142
-      "Skill(\uB808\uD22C\uB2E4)-sheet_5": -1092047789
-      "Skill(\uB808\uD22C\uB2E4)-sheet_10": -1545766902
-      "Skill(\uB808\uD22C\uB2E4)-sheet_3": 1779293393
-      "Skill(\uB808\uD22C\uB2E4)-sheet_15": -681270016
-      "Skill(\uB808\uD22C\uB2E4)-sheet_7": -1595012420
-      "Skill(\uB808\uD22C\uB2E4)-sheet_4": 1608382847
-      "Skill(\uB808\uD22C\uB2E4)-sheet_13": 1771595789
-      "Skill(\uB808\uD22C\uB2E4)-sheet_2": -954855160
-      "Skill(\uB808\uD22C\uB2E4)-sheet_11": 581719777
-      "Skill(\uB808\uD22C\uB2E4)-sheet_6": 1403200685
-      "Skill(\uB808\uD22C\uB2E4)-sheet_1": 734561765
-      "Skill(\uB808\uD22C\uB2E4)-sheet_12": -509603266
-      "Skill(\uB808\uD22C\uB2E4)-sheet_0": 660635725
-      "Skill(\uB808\uD22C\uB2E4)-sheet_9": -1524913194
-      "Skill(\uB808\uD22C\uB2E4)-sheet_8": -1440837914
+      ReadToDie_4: 418392037
+      ReadToDie_3: -1001909495
+      ReadToDie_1: -670137691
+      ReadToDie_6: -1732683827
+      ReadToDie_5: 1740620480
+      ReadToDie_0: 1841778051
+      ReadToDie_9: 402101437
+      ReadToDie_2: 1227181228
+      ReadToDie_8: -1560729130
+      ReadToDie_7: 1512424229
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

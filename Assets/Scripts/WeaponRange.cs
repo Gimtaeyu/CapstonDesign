@@ -92,7 +92,7 @@ public class WeaponRange : MonoBehaviour
         if (anim_attack.GetCurrentAnimatorStateInfo(0).IsName("Attack_Sword") &&
            anim_attack.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.3f)
         {
-            Debug.Log("afgasgasgdagasdhasdfh");
+           // Debug.Log("afgasgasgdagasdhasdfh");
             W_isatkOn = false;
         }
 
@@ -117,6 +117,10 @@ public class WeaponRange : MonoBehaviour
         {
             if (skill_ui[0].value == 1)
             {
+                anim_Skill.SetTrigger("isSkillA");
+                isA = true;
+
+
                 curValue[0] = 0.0f;
             }
         }
@@ -124,6 +128,10 @@ public class WeaponRange : MonoBehaviour
         {
             if (skill_ui[1].value == 1)
             {
+                anim_Skill.SetTrigger("isSkillS");
+
+
+
                 curValue[1] = 0.0f;
             }
         }
@@ -165,6 +173,29 @@ public class WeaponRange : MonoBehaviour
                 skill_D_duration = 10.0f;
                 isD = false;
             }
+        }
+
+        if(isA)
+        {
+            if (anim_Skill.GetCurrentAnimatorStateInfo(0).IsName("SkillA") &&
+           anim_Skill.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.45f)
+            {
+                this.GetComponentInChildren<CircleCollider2D>().enabled = true;
+
+
+            }
+
+
+            if (anim_Skill.GetCurrentAnimatorStateInfo(0).IsName("SkillA") &&
+           anim_Skill.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.95f)
+            {
+                Debug.Log("²¨Á®");
+                this.GetComponentInChildren<CircleCollider2D>().enabled = false;
+                isA = false;
+
+
+            }
+
         }
 
 
