@@ -36,7 +36,6 @@ public class EnemyMove : MonoBehaviour
         //transform.position = Vector3.MoveTowards(transform.position, target.position, e_speed2 * Time.deltaTime);
         if(e_HP <= 0)
         {
-            Debug.Log("µÚÁ®¶ó");
             this.GetComponent<CircleCollider2D>().enabled = false;
             e_speed2 = 0;
             anim.SetTrigger("isDead");
@@ -87,7 +86,19 @@ public class EnemyMove : MonoBehaviour
                 }
             }
         }
+
+
+        if (collision.tag == "Shield")
+        {
+            StartCoroutine(KnockbackRoutine(10f));
+
+            Debug.Log("?????????????????????");
+        }
+
     }
+
+    
+    
 
     IEnumerator KnockbackRoutine(float knockbackSpeed)
     {
