@@ -30,10 +30,14 @@ public class WeaponRange : MonoBehaviour
     //Skill
     float skill_D_duration;
 
+    public GameObject S_Object;
+
     bool isA;
     bool isS;
     bool isD;
     bool isF;
+
+
 
     public Slider[] skill_ui;
     float[] maxValue = new float[4];
@@ -90,7 +94,7 @@ public class WeaponRange : MonoBehaviour
     void Update()
     {
         if (anim_attack.GetCurrentAnimatorStateInfo(0).IsName("Attack_Sword") &&
-           anim_attack.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.3f)
+           anim_attack.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.35f)
         {
            // Debug.Log("afgasgasgdagasdhasdfh");
             W_isatkOn = false;
@@ -128,8 +132,11 @@ public class WeaponRange : MonoBehaviour
         {
             if (skill_ui[1].value == 1)
             {
-                anim_Skill.SetTrigger("isSkillS");
+                //S_Object.SetActive(true);
+                Instantiate(S_Object, transform.position, Quaternion.identity);
 
+                //anim_Skill.SetTrigger("isSkillS");
+                isS = true;
 
 
                 curValue[1] = 0.0f;
@@ -162,20 +169,7 @@ public class WeaponRange : MonoBehaviour
 
         //스킬 구현 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         //스킬 D
-
-        if (isD)
-        {
-            skill_D_duration -= Time.deltaTime;
-
-            if(skill_D_duration < 0)
-            {
-                W_atkDamage = 3.0f;
-                skill_D_duration = 10.0f;
-                isD = false;
-            }
-        }
-
-        if(isA)
+        if (isA)
         {
             if (anim_Skill.GetCurrentAnimatorStateInfo(0).IsName("SkillA") &&
            anim_Skill.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.45f)
@@ -197,6 +191,23 @@ public class WeaponRange : MonoBehaviour
             }
 
         }
+        if (isD)
+        {
+            skill_D_duration -= Time.deltaTime;
+
+            if(skill_D_duration < 0)
+            {
+                W_atkDamage = 3.0f;
+                skill_D_duration = 10.0f;
+                isD = false;
+            }
+        }
+        if(isS)
+        {
+            //S_Target = GameObject.FindWithTag("Enemy");
+
+        }
+       
 
 
 
