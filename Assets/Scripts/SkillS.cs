@@ -14,11 +14,18 @@ public class SkillS : MonoBehaviour
     void Awake()
     {
         this.transform.position = GameObject.FindWithTag("Player").transform.position;
+
+        if(GameObject.FindWithTag("Enemy") == null)
+        {
+            Destroy(gameObject);
+        }
+
         FoundObjects = new List<GameObject>(GameObject.FindGameObjectsWithTag("Enemy"));
         shortDis = Vector3.Distance(gameObject.transform.position, FoundObjects[0].transform.position); // 첫번째를 기준으로 잡아주기 
 
         target = FoundObjects[0]; // 첫번째를 먼저 
 
+       
         foreach (GameObject found in FoundObjects)
         {
             float Distance = Vector3.Distance(gameObject.transform.position, found.transform.position);
@@ -33,6 +40,7 @@ public class SkillS : MonoBehaviour
     }
     void Start()
     {
+        
         anim = this.GetComponent<Animator>();
         dir = target.transform.position.x - transform.position.x;
 
@@ -56,7 +64,9 @@ public class SkillS : MonoBehaviour
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("SkillS") &&
          anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.95f)
         {
-            Debug.Log("사라져라");
+            target.GetComponent<EnemyMove>().e_HP -= 10;
+
+
             Destroy(gameObject);
         }
         

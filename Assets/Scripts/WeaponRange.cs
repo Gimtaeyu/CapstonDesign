@@ -31,13 +31,10 @@ public class WeaponRange : MonoBehaviour
     float skill_D_duration;
 
     public GameObject S_Object;
+    public GameObject F_Object;
 
     bool isA;
-    bool isS;
     bool isD;
-    bool isF;
-
-
 
     public Slider[] skill_ui;
     float[] maxValue = new float[4];
@@ -50,7 +47,7 @@ public class WeaponRange : MonoBehaviour
         maxValue[0] = 1.0f; //A스킬 쿨타임 조정
         maxValue[1] = 5.0f; //S스킬 쿨타임 조정
         maxValue[2] = 10.0f; //D스킬 쿨타임 조정
-        maxValue[3] = 50.0f; //F스킬 쿨타임 조정
+        maxValue[3] = 5.0f; //F스킬 쿨타임 조정
 
         for(int i = 0; i < 4; i++)
         {
@@ -81,9 +78,7 @@ public class WeaponRange : MonoBehaviour
         playmove_scr = this.GetComponentInParent<PlayerMove>();
 
         isA = false;
-        isS = false;
         isD = false;
-        isF = false;
 
         anim_attack = player.GetComponent<Animator>();
 
@@ -96,7 +91,6 @@ public class WeaponRange : MonoBehaviour
         if (anim_attack.GetCurrentAnimatorStateInfo(0).IsName("Attack_Sword") &&
            anim_attack.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.35f)
         {
-           // Debug.Log("afgasgasgdagasdhasdfh");
             W_isatkOn = false;
         }
 
@@ -132,12 +126,7 @@ public class WeaponRange : MonoBehaviour
         {
             if (skill_ui[1].value == 1)
             {
-                //S_Object.SetActive(true);
                 Instantiate(S_Object, transform.position, Quaternion.identity);
-
-                //anim_Skill.SetTrigger("isSkillS");
-                isS = true;
-
 
                 curValue[1] = 0.0f;
             }
@@ -158,6 +147,18 @@ public class WeaponRange : MonoBehaviour
         {
             if (skill_ui[3].value == 1)
             {
+                if (player.transform.rotation.y != 0)
+                {
+                    GameObject temp = Instantiate(F_Object, transform.position + new Vector3(6.0f, 0, 0), player.transform.rotation);
+                    temp.transform.SetParent(transform);
+                }
+                else
+                {
+                    GameObject temp = Instantiate(F_Object, transform.position - new Vector3(6.0f, 0, 0), player.transform.rotation);
+                    temp.transform.SetParent(transform);
+                }
+                
+
                 curValue[3] = 0.0f;
             }
         }
@@ -202,14 +203,8 @@ public class WeaponRange : MonoBehaviour
                 isD = false;
             }
         }
-        if(isS)
-        {
-            //S_Target = GameObject.FindWithTag("Enemy");
 
-        }
-       
-
-
+      
 
     }
 

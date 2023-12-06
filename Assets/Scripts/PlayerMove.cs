@@ -10,7 +10,7 @@ public class PlayerMove : MonoBehaviour
 
 
     Rigidbody2D rigid;
-    float hInput;
+    public float hInput;
     float vInput;
     Vector2 moveVec;
 
@@ -62,14 +62,12 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             hInput = -1;
-            //this.GetComponent<SpriteRenderer>().flipX = false;
             this.transform.rotation = Quaternion.Euler(0, 0, 0);
             anim.SetBool("isMoving", true);
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
             hInput = 1;
-            //this.GetComponent<SpriteRenderer>().flipX = true;
             this.transform.rotation = Quaternion.Euler(0, 180, 0);
             anim.SetBool("isMoving", true);
         }

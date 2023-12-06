@@ -180,4 +180,9 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetInt("Speed_Level", temp);
         }
     }
+
+    public void CreateStore()
+    {
+        SceneManager.LoadScene("Create");
+    }
 }

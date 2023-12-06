@@ -8,10 +8,11 @@ public class EnemyMove : MonoBehaviour
     Transform target;
     private float e_speed2;//일정속도
     private float knockbackSpeed;
-    private float e_HP;
+    public float e_HP;
     Rigidbody2D rBody2D;
     Vector3 dir;
     bool isAttacked;
+    bool isLazer;
 
     //드랍재료
     public GameObject[] drop_Material;
@@ -43,9 +44,10 @@ public class EnemyMove : MonoBehaviour
             if (anim.GetCurrentAnimatorStateInfo(0).IsName("enemy_dead") == true &&
                 anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.95f)
             {
+                int randnum = Random.Range(0, 3);
                 PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money") + 50);
                 GameManager.is_renewMoney = true;
-                Instantiate(drop_Material[0], transform.position, Quaternion.identity);
+                Instantiate(drop_Material[randnum], transform.position, Quaternion.identity);
 
 
                 Destroy(this.gameObject);
@@ -92,13 +94,35 @@ public class EnemyMove : MonoBehaviour
         {
             StartCoroutine(KnockbackRoutine(10f));
 
-            Debug.Log("?????????????????????");
+        }
+
+
+        if (collision.tag == "Lazer")
+        {
+            if(!isLazer)
+            {
+                StartCoroutine(KnockbackInfinite(3f));
+
+            }
         }
 
     }
 
-    
-    
+
+
+    IEnumerator KnockbackInfinite(float knockbackSpeed)
+    {
+        isLazer = true;
+
+        e_HP -= 2.0f;
+
+        this.knockbackSpeed = -knockbackSpeed * 2.0f;
+        yield return new WaitForSeconds(0.1f);
+        this.knockbackSpeed = 1f;
+        yield return new WaitForSeconds(0.1f);
+
+        isLazer = false;
+    }
 
     IEnumerator KnockbackRoutine(float knockbackSpeed)
     {
