@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PlayerMove : MonoBehaviour
 {
     public float speed;
+    float maxHp;
     public float curHp;
 
 
@@ -18,6 +19,7 @@ public class PlayerMove : MonoBehaviour
     
     public bool called_Inhence;
 
+    public Slider hp_Bar;
 
     //DB
     public Player_Status Status_DB;
@@ -25,11 +27,13 @@ public class PlayerMove : MonoBehaviour
 
     private void Awake()
     {
-        curHp = 100;
+        maxHp = 100;
+        curHp = maxHp;
         status = Status_DB.Status;
 
         anim = this.GetComponent<Animator>();
         rigid = this.GetComponent<Rigidbody2D>();
+        hp_Bar.value = 1;
     }
 
     void Start()
@@ -43,11 +47,28 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-        Player_Move();
+
+        anim.SetFloat("isDead", curHp);
+        if(curHp >= 0)
+        {
+            hp_Bar.value = curHp / maxHp;
+            Player_Move();
+
+        }
+        else
+        {
+            hInput = 0; vInput = 0;
+            hp_Bar.value = 0;
+            moveVec = new Vector2(hInput, vInput);
+
+            rigid.velocity = moveVec * speed;
+            this.GetComponent<CapsuleCollider2D>().enabled = false;
+
+        }
 
 
 
-        if(called_Inhence)
+        if (called_Inhence)
         {
             speed = 5.0f + status[PlayerPrefs.GetInt("Speed_Level")].Inhence_Speed;
             called_Inhence = false;
@@ -59,6 +80,10 @@ public class PlayerMove : MonoBehaviour
 
     private void Player_Move()
     {
+        if(curHp < 0)
+        {
+            return;
+        }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             hInput = -1;
@@ -118,30 +143,17 @@ public class PlayerMove : MonoBehaviour
 
                     Destroy(collision.gameObject);
                 }
-            }
-
-           //if(collision.gameObject.name.Contains("1"))
-           //{
-           //    int tempInt = PlayerPrefs.GetInt("Drop_1");
-           //    PlayerPrefs.SetInt("Drop_1", tempInt++);
-           //}
-           //else if(collision.gameObject.name.Contains("2"))
-           //{
-           //    int tempInt = PlayerPrefs.GetInt("Drop_2");
-           //    PlayerPrefs.SetInt("Drop_2", tempInt++);
-           //}
-           //else if (collision.gameObject.name.Contains("3"))
-           //{
-           //    int tempInt = PlayerPrefs.GetInt("Drop_3");
-           //    PlayerPrefs.SetInt("Drop_3", tempInt++);
-           //}
+            }          
         }
+    }
 
-        if(collision.gameObject.tag == "Enemy")
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
         {
             curHp--;
         }
-
     }
 
 

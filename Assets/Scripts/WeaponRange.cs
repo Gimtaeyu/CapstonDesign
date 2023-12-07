@@ -14,6 +14,7 @@ public class WeaponRange : MonoBehaviour
     public float W_cooltime;
 
     public bool W_isatkOn;
+    public bool W_isAttacking;
     public float knockbackSpeed;
 
     public int attackCount;
@@ -36,7 +37,10 @@ public class WeaponRange : MonoBehaviour
     bool isA;
     bool isD;
 
+    bool[] isLock = new bool[4];
+
     public Slider[] skill_ui;
+    public GameObject[] lock_Icon;
     float[] maxValue = new float[4];
     float[] curValue = new float[4];
 
@@ -49,9 +53,41 @@ public class WeaponRange : MonoBehaviour
         maxValue[2] = 10.0f; //D스킬 쿨타임 조정
         maxValue[3] = 5.0f; //F스킬 쿨타임 조정
 
+
         for(int i = 0; i < 4; i++)
         {
+            if(PlayerPrefs.HasKey("SkillLock_"+i))
+            {
+                if (PlayerPrefs.GetInt("SkillLock_" + i) != 0)
+                {
+                    isLock[i] = false;              //스킬해금
+
+                }
+                else
+                {
+                    isLock[i] = true;
+
+                }
+            }
+            else
+            {
+                PlayerPrefs.SetInt("SkillLock_" + i, 0);
+                isLock[i] = true;
+            }
+
             curValue[i] = maxValue[i];
+            
+
+            if (isLock[i])
+            {
+                lock_Icon[i].SetActive(true);
+
+            }
+            else
+            {
+                lock_Icon[i].SetActive(false);
+
+            }
         }
 
         if (W_number == 0)
@@ -75,6 +111,7 @@ public class WeaponRange : MonoBehaviour
         is_searchEnemy = false;
         knockbackSpeed = 5f;
         W_isatkOn = true;
+        W_isAttacking = false;
         playmove_scr = this.GetComponentInParent<PlayerMove>();
 
         isA = false;
@@ -88,11 +125,23 @@ public class WeaponRange : MonoBehaviour
 
     void Update()
     {
+        
+
         if (anim_attack.GetCurrentAnimatorStateInfo(0).IsName("Attack_Sword") &&
-           anim_attack.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.35f)
+          anim_attack.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.1f)
         {
+            W_isAttacking = true;
+
+        }
+
+        if (anim_attack.GetCurrentAnimatorStateInfo(0).IsName("Attack_Sword") &&
+           anim_attack.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.8f)
+        {
+            W_isAttacking = false;
+           
             W_isatkOn = false;
         }
+
 
         if (W_cooltime < 0)
         {
@@ -113,53 +162,65 @@ public class WeaponRange : MonoBehaviour
     {
         if (Input.GetKeyDown("a"))
         {
-            if (skill_ui[0].value == 1)
+            if (!isLock[0])
             {
-                anim_Skill.SetTrigger("isSkillA");
-                isA = true;
+                if (skill_ui[0].value == 1)
+                {
+                    anim_Skill.SetTrigger("isSkillA");
+                    isA = true;
 
 
-                curValue[0] = 0.0f;
+                    curValue[0] = 0.0f;
+                }
             }
         }
         if (Input.GetKeyDown("s"))
         {
-            if (skill_ui[1].value == 1)
+            if (!isLock[1])
             {
-                Instantiate(S_Object, transform.position, Quaternion.identity);
+                if (skill_ui[1].value == 1)
+                {
+                    Instantiate(S_Object, transform.position, Quaternion.identity);
 
-                curValue[1] = 0.0f;
+                    curValue[1] = 0.0f;
+                }
             }
         }
         if (Input.GetKeyDown("d"))
         {
-            if (skill_ui[2].value == 1)
+            if (!isLock[2])
             {
-                anim_Skill.SetTrigger("isSkillD");
-                W_atkDamage = 10.0f;
-                skill_D_duration = 0;
+                if (skill_ui[2].value == 1)
+                {
+                    anim_Skill.SetTrigger("isSkillD");
+                    W_atkDamage = 10.0f;
+                    skill_D_duration = 0;
 
-                isD = true;
-                curValue[2] = 0.0f;
+                    isD = true;
+                    curValue[2] = 0.0f;
+                }
             }
         }
         if (Input.GetKeyDown("f"))
         {
-            if (skill_ui[3].value == 1)
+            if (!isLock[3])
             {
-                if (player.transform.rotation.y != 0)
+                if (skill_ui[3].value == 1)
                 {
-                    GameObject temp = Instantiate(F_Object, transform.position + new Vector3(6.0f, 0, 0), player.transform.rotation);
-                    temp.transform.SetParent(transform);
-                }
-                else
-                {
-                    GameObject temp = Instantiate(F_Object, transform.position - new Vector3(6.0f, 0, 0), player.transform.rotation);
-                    temp.transform.SetParent(transform);
-                }
-                
+                    if (player.transform.rotation.y != 0)
+                    {
+                        GameObject temp = Instantiate(F_Object, transform.position + new Vector3(6.0f, 0, 0), player.transform.rotation);
+                        temp.transform.SetParent(transform);
+                    }
+                    else
+                    {
+                        GameObject temp = Instantiate(F_Object, transform.position - new Vector3(6.0f, 0, 0), player.transform.rotation);
+                        temp.transform.SetParent(transform);
+                    }
 
-                curValue[3] = 0.0f;
+
+                    curValue[3] = 0.0f;
+                }
             }
         }
         for (int i = 0; i < skill_ui.Length; i++)
@@ -219,7 +280,6 @@ public class WeaponRange : MonoBehaviour
                 {
                     if (W_cooltime <= 0) //한번만 실행
                     {
-                        Debug.Log("왜와이?>");
                         anim_attack.SetTrigger("isAttack");
                         W_cooltime = 2.0f;
                     }

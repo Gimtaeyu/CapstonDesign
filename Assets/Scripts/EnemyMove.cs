@@ -76,7 +76,7 @@ public class EnemyMove : MonoBehaviour
     {
         if (collision.tag == "Weapon")
         {
-            if (collision.GetComponent<WeaponRange>().W_isatkOn)
+            if (collision.GetComponent<WeaponRange>().W_isAttacking)
             {
                 if (!isAttacked)
                 {
