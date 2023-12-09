@@ -87,14 +87,18 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             hInput = -1;
-            this.transform.rotation = Quaternion.Euler(0, 0, 0);
+            //this.transform.rotation = Quaternion.Euler(0, 0, 0);
+            this.transform.localScale = new Vector3(3, 3, 4);
             anim.SetBool("isMoving", true);
+            BackgroundOffset.instance.Leftmove();
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
             hInput = 1;
-            this.transform.rotation = Quaternion.Euler(0, 180, 0);
+           // this.transform.rotation = Quaternion.Euler(0, 180, 0);
+            this.transform.localScale = new Vector3(-3, 3, 4);
             anim.SetBool("isMoving", true);
+           BackgroundOffset.instance.Rightmove();
         }
         else
         {

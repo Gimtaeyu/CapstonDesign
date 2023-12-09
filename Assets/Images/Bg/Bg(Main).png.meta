@@ -36,9 +36,9 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -262,13 +262,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Bg(Main)_0: 564993644
-      Bg(Main)_1: -1777516824
-      Bg(Main)_2: 662157557
       Bg(Main)_3: -823356902
-      Bg(Main)_4: 328391857
+      Bg(Main)_0: 564993644
       Bg(Main)_5: -263330008
       Bg(Main)_6: -1394492201
+      Bg(Main)_1: -1777516824
+      Bg(Main)_2: 662157557
+      Bg(Main)_4: 328391857
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -13,6 +13,6 @@ public class CameraMove : MonoBehaviour
     {
         test = GameObject.FindWithTag("Player").transform.position;
 
-        transform.position = new Vector3(test.x, test.y, transform.position.z);
+        transform.position = new Vector3(test.x, 0, transform.position.z);
     }
 }
