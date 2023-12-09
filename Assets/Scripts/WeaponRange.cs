@@ -65,8 +65,8 @@ public class WeaponRange : MonoBehaviour
                 }
                 else
                 {
-                    //isLock[i] = true;
-                    isLock[i] = false;
+                    isLock[i] = true;
+                    //isLock[i] = false;
 
                 }
             }
