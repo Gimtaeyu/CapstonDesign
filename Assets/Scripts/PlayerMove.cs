@@ -21,6 +21,8 @@ public class PlayerMove : MonoBehaviour
 
     public Slider hp_Bar;
 
+    [SerializeField] private GameObject range;
+
     //DB
     public Player_Status Status_DB;
     List<Player_DB_Entity> status;
@@ -88,15 +90,19 @@ public class PlayerMove : MonoBehaviour
         {
             hInput = -1;
             //this.transform.rotation = Quaternion.Euler(0, 0, 0);
-            this.transform.localScale = new Vector3(3, 3, 4);
+            //this.transform.localScale = new Vector3(3, 3, 4);
+            this.GetComponent<SpriteRenderer>().flipX = false;
+            range.transform.localScale = new Vector3(2, 2, 1);
             anim.SetBool("isMoving", true);
             BackgroundOffset.instance.Leftmove();
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
             hInput = 1;
-           // this.transform.rotation = Quaternion.Euler(0, 180, 0);
-            this.transform.localScale = new Vector3(-3, 3, 4);
+            //this.transform.rotation = Quaternion.Euler(0, 180, 0);
+            //this.transform.localScale = new Vector3(-3, 3, 4);
+            this.GetComponent<SpriteRenderer>().flipX = true;
+            range.transform.localScale = new Vector3(-2, 2, 1);
             anim.SetBool("isMoving", true);
            BackgroundOffset.instance.Rightmove();
         }

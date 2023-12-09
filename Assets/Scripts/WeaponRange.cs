@@ -65,7 +65,8 @@ public class WeaponRange : MonoBehaviour
                 }
                 else
                 {
-                    isLock[i] = true;
+                    //isLock[i] = true;
+                    isLock[i] = false;
 
                 }
             }
@@ -207,16 +208,27 @@ public class WeaponRange : MonoBehaviour
             {
                 if (skill_ui[3].value == 1)
                 {
-                    if (player.transform.rotation.y != 0)
-                    {
-                        GameObject temp = Instantiate(F_Object, transform.position + new Vector3(6.0f, 0, 0), player.transform.rotation);
-                        temp.transform.SetParent(transform);
-                    }
-                    else
+                    if(player.GetComponent<SpriteRenderer>().flipX == false)
                     {
                         GameObject temp = Instantiate(F_Object, transform.position - new Vector3(6.0f, 0, 0), player.transform.rotation);
                         temp.transform.SetParent(transform);
                     }
+                    else
+                    {
+                        GameObject temp = Instantiate(F_Object, transform.position + new Vector3(6.0f, 0, 0), player.transform.rotation);
+                        temp.transform.SetParent(transform);
+                    }
+
+                    //if (player.transform.rotation.y != 0)
+                    //{
+                    //    GameObject temp = Instantiate(F_Object, transform.position + new Vector3(6.0f, 0, 0), player.transform.rotation);
+                    //    temp.transform.SetParent(transform);
+                    //}
+                    //else
+                    //{
+                    //    GameObject temp = Instantiate(F_Object, transform.position - new Vector3(6.0f, 0, 0), player.transform.rotation);
+                    //    temp.transform.SetParent(transform);
+                    //}
 
 
                     curValue[3] = 0.0f;
