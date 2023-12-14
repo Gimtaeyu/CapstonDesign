@@ -1107,6 +1107,7 @@ MonoBehaviour:
   hInput: 0
   called_Inhence: 0
   hp_Bar: {fileID: 1728738089}
+  range: {fileID: 704321612}
   Status_DB: {fileID: 11400000, guid: f3e495e6fb158fb4a84d7ce06dc7f935, type: 2}
 --- !u!50 &374188874
 Rigidbody2D:
