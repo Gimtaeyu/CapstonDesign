@@ -5,6 +5,14 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
+    /*
+     * 플레이어 프리팹 이름들
+       재료 : Drop_1, Drop_2, Drop_3
+        돈 : Money
+        강화레벨 : Atk_Level, Hp_Level, Speed_Level
+        체력 : Cur_HP
+      
+     */
 
     public Text money_txt, atkLevel_txt, hpLevel_txt, speedLevel_txt;
     public static bool is_renewMoney;
@@ -16,6 +24,12 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
+        //PlayerPrefs.DeleteAll();
+        //치트
+        //PlayerPrefs.SetInt("Drop_1", 10);
+        //PlayerPrefs.SetInt("Drop_2", 10);
+        //PlayerPrefs.SetInt("Drop_3", 10);
+
         if (!PlayerPrefs.HasKey("Money"))
         {
             PlayerPrefs.SetInt("Money", 0);

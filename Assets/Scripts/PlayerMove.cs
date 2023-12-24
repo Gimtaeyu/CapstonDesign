@@ -8,7 +8,7 @@ public class PlayerMove : MonoBehaviour
     public float speed;
     float maxHp;
     public float curHp;
-
+    float cure_cooltime;
 
     Rigidbody2D rigid;
     public float hInput;
@@ -30,7 +30,6 @@ public class PlayerMove : MonoBehaviour
     private void Awake()
     {
         maxHp = 100;
-        curHp = maxHp;
         status = Status_DB.Status;
 
         anim = this.GetComponent<Animator>();
@@ -43,18 +42,33 @@ public class PlayerMove : MonoBehaviour
         called_Inhence = false; 
 
         speed = 5.0f + status[PlayerPrefs.GetInt("Speed_Level")].Inhence_Speed;
+        maxHp = 100 + status[PlayerPrefs.GetInt("Hp_Level")].Inhence_Hp;
 
-
+        curHp = maxHp;
+        cure_cooltime = 1.0f;
     }
 
     void Update()
     {
+        
 
         anim.SetFloat("isDead", curHp);
+
         if(curHp >= 0)
         {
             hp_Bar.value = curHp / maxHp;
             Player_Move();
+            cure_cooltime -= Time.deltaTime;
+
+            if (cure_cooltime < 0)
+            {
+                if (curHp < maxHp)
+                {
+                    curHp += 2.0f;
+                }
+                cure_cooltime = 1.0f;
+            }
+            PlayerPrefs.SetFloat("Cur_HP", curHp);
 
         }
         else
@@ -73,6 +87,8 @@ public class PlayerMove : MonoBehaviour
         if (called_Inhence)
         {
             speed = 5.0f + status[PlayerPrefs.GetInt("Speed_Level")].Inhence_Speed;
+            maxHp = 100 + status[PlayerPrefs.GetInt("Hp_Level")].Inhence_Hp;
+
             called_Inhence = false;
         }
     }

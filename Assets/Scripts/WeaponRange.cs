@@ -215,7 +215,7 @@ public class WeaponRange : MonoBehaviour
                     }
                     else
                     {
-                        GameObject temp = Instantiate(F_Object, transform.position + new Vector3(6.0f, 0, 0), player.transform.rotation);
+                        GameObject temp = Instantiate(F_Object, transform.position + new Vector3(6.0f, 0, 0), Quaternion.Euler(new Vector3(0,180,0)));
                         temp.transform.SetParent(transform);
                     }
 
