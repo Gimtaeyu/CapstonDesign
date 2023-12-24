@@ -24,7 +24,6 @@ public class SkillF : MonoBehaviour
          anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)
         {
 
-
             Destroy(gameObject);
         }
     }

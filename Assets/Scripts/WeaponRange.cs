@@ -94,7 +94,7 @@ public class WeaponRange : MonoBehaviour
         if (W_number == 0)
         {
             W_Range_radius = 1.5f;
-            W_atkDamage = 3.0f;
+            W_atkDamage = 3.0f + PlayerPrefs.GetInt("Atk_Level", 1) * 0.1f;
             W_cooltime = 1.0f;
         }
 
@@ -194,8 +194,8 @@ public class WeaponRange : MonoBehaviour
                 if (skill_ui[2].value == 1)
                 {
                     anim_Skill.SetTrigger("isSkillD");
-                    W_atkDamage = 10.0f;
-                    skill_D_duration = 0;
+                    W_atkDamage = 10.0f + PlayerPrefs.GetInt("Atk_Level", 1) * 0.1f; ;
+                    skill_D_duration = 10.0f;
 
                     isD = true;
                     curValue[2] = 0.0f;

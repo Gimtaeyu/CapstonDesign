@@ -114,7 +114,7 @@ public class EnemyMove : MonoBehaviour
     {
         isLazer = true;
 
-        e_HP -= 2.0f;
+        e_HP -= 2.0f + PlayerPrefs.GetInt("Atk_Level", 1) * 0.1f; ;
 
         this.knockbackSpeed = -knockbackSpeed * 2.0f;
         yield return new WaitForSeconds(0.1f);

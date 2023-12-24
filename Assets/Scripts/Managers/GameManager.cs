@@ -141,6 +141,8 @@ public class GameManager : MonoBehaviour
         if (!PlayerPrefs.HasKey("Atk_Level"))
         {
             PlayerPrefs.SetInt("Atk_Level", 1);
+
+            
         }
         else
         {
@@ -148,6 +150,11 @@ public class GameManager : MonoBehaviour
             if(temp < 30)
             {
                 temp++;
+                int temp_Money = PlayerPrefs.GetInt("Money");
+                temp_Money -= 3;
+
+                PlayerPrefs.SetInt("Money", temp_Money);
+                money_txt.text = PlayerPrefs.GetInt("Money").ToString();
             }
             atkLevel_txt.text = temp.ToString();
             PlayerPrefs.SetInt("Atk_Level", temp);
@@ -169,6 +176,12 @@ public class GameManager : MonoBehaviour
             if (temp < 30)
             {
                 temp++;
+                int temp_Money = PlayerPrefs.GetInt("Money");
+                temp_Money -= 3;
+
+                PlayerPrefs.SetInt("Money", temp_Money);
+                money_txt.text = PlayerPrefs.GetInt("Money").ToString();
+
             }
             hpLevel_txt.text = temp.ToString();
             PlayerPrefs.SetInt("Hp_Level", temp);
@@ -189,6 +202,11 @@ public class GameManager : MonoBehaviour
             if (temp < 30)
             {
                 temp++;
+                int temp_Money = PlayerPrefs.GetInt("Money");
+                temp_Money -= 3;
+
+                PlayerPrefs.SetInt("Money", temp_Money);
+                money_txt.text = PlayerPrefs.GetInt("Money").ToString();
             }
             speedLevel_txt.text = temp.ToString();
             PlayerPrefs.SetInt("Speed_Level", temp);

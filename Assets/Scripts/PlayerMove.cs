@@ -88,7 +88,7 @@ public class PlayerMove : MonoBehaviour
         {
             speed = 5.0f + status[PlayerPrefs.GetInt("Speed_Level")].Inhence_Speed;
             maxHp = 100 + status[PlayerPrefs.GetInt("Hp_Level")].Inhence_Hp;
-
+            this.GetComponentInChildren<WeaponRange>().W_atkDamage = 3.0f + status[PlayerPrefs.GetInt("Atk_Level")].Inhence_Atk;
             called_Inhence = false;
         }
     }

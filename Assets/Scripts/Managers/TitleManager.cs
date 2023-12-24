@@ -7,7 +7,7 @@ public class TitleManager : MonoBehaviour
 {
     void Start()
     {
-        
+        PlayerPrefs.DeleteAll();
     }
 
     void Update()
