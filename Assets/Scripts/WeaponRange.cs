@@ -8,7 +8,6 @@ public class WeaponRange : MonoBehaviour
     public bool is_searchEnemy;
     
     private int W_number;
-    private float W_Range_radius;
 
     public float W_atkDamage;
     public float W_cooltime;
@@ -93,7 +92,6 @@ public class WeaponRange : MonoBehaviour
 
         if (W_number == 0)
         {
-            W_Range_radius = 1.5f;
             W_atkDamage = 3.0f + PlayerPrefs.GetInt("Atk_Level", 1) * 0.1f;
             W_cooltime = 1.0f;
         }

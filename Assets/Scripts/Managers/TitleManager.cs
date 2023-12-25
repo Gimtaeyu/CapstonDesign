@@ -7,7 +7,8 @@ public class TitleManager : MonoBehaviour
 {
     void Start()
     {
-        PlayerPrefs.DeleteAll();
+        //PlayerPrefs.DeleteAll();
+        PlayerPrefs.SetString("FromSceneName", "Title");
     }
 
     void Update()

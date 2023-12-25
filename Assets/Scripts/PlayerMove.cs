@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerMove : MonoBehaviour
 {
     public float speed;
-    float maxHp;
+    float maxHp = 100;
     public float curHp;
     float cure_cooltime;
 
@@ -29,7 +29,7 @@ public class PlayerMove : MonoBehaviour
 
     private void Awake()
     {
-        maxHp = 100;
+
         status = Status_DB.Status;
 
         anim = this.GetComponent<Animator>();
@@ -44,7 +44,14 @@ public class PlayerMove : MonoBehaviour
         speed = 5.0f + status[PlayerPrefs.GetInt("Speed_Level")].Inhence_Speed;
         maxHp = 100 + status[PlayerPrefs.GetInt("Hp_Level")].Inhence_Hp;
 
-        curHp = maxHp;
+        if(PlayerPrefs.GetString("FromSceneName") == "Title")
+        {
+            curHp = maxHp;
+        }
+        else if(PlayerPrefs.GetString("FromSceneName") == "Create")
+        {
+            curHp = PlayerPrefs.GetFloat("Cur_HP", 100);
+        }
         cure_cooltime = 1.0f;
     }
 

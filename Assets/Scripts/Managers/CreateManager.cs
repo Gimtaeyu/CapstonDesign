@@ -27,7 +27,7 @@ public class CreateManager : MonoBehaviour
 
     public void UnLockA()
     {
-        if(drop_Count[0] >= 1 && drop_Count[1] >= 1 && drop_Count[2] >= 1)
+        if(drop_Count[0] >= 1 && drop_Count[1] >= 1 && drop_Count[2] >= 1 && PlayerPrefs.GetInt("SkillLock_0") != 1)
         {
             PlayerPrefs.SetInt("SkillLock_0", 1);
             for(int i =0; i <3; i++)
@@ -46,7 +46,7 @@ public class CreateManager : MonoBehaviour
     }
     public void UnLockS()
     {
-        if (drop_Count[0] >= 2 && drop_Count[1] >= 2 && drop_Count[2] >= 2)
+        if (drop_Count[0] >= 2 && drop_Count[1] >= 2 && drop_Count[2] >= 2 && PlayerPrefs.GetInt("SkillLock_1") != 1)
         {
             PlayerPrefs.SetInt("SkillLock_1", 1);
             for (int i = 0; i < 3; i++)
@@ -65,7 +65,7 @@ public class CreateManager : MonoBehaviour
     }
     public void UnLockD()
     {
-        if (drop_Count[0] >= 3 && drop_Count[1] >= 3 && drop_Count[2] >= 1)
+        if (drop_Count[0] >= 3 && drop_Count[1] >= 3 && drop_Count[2] >= 1 && PlayerPrefs.GetInt("SkillLock_2") != 1)
         {
             PlayerPrefs.SetInt("SkillLock_2", 1);
             drop_Count[0] -= 3;
@@ -87,7 +87,7 @@ public class CreateManager : MonoBehaviour
     }
     public void UnLockF()
     {
-        if (drop_Count[0] >= 5 && drop_Count[1] >= 5 && drop_Count[2] >= 5)
+        if (drop_Count[0] >= 5 && drop_Count[1] >= 5 && drop_Count[2] >= 5 && PlayerPrefs.GetInt("SkillLock_3") != 1)
         {
             PlayerPrefs.SetInt("SkillLock_3", 1);
             
@@ -110,6 +110,8 @@ public class CreateManager : MonoBehaviour
 
     public void ExitButton()
     {
+        PlayerPrefs.SetString("FromSceneName", "Create");
         SceneManager.LoadScene("Main");
+
     }
 }
