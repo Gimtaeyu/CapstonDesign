@@ -26,7 +26,9 @@ public class BasicSword_WP : MonoBehaviour
             float theta = Mathf.Acos(dot);
             // angleRange와 비교하기 위해 degree로 변환
             float degree = Mathf.Rad2Deg * theta;
+#if UNITY_EDITOR
             OnDrawGizmos();
+#endif
 
             // 시야각 판별
             if (degree <= angleRange / 2f)
@@ -49,6 +51,7 @@ public class BasicSword_WP : MonoBehaviour
     }
 
     // 유니티 에디터에 부채꼴을 그려줄 메소드
+#if UNITY_EDITOR
     private void OnDrawGizmos()
     {
         Handles.color = isCollision ? _red : _blue;
@@ -56,4 +59,5 @@ public class BasicSword_WP : MonoBehaviour
         Handles.DrawSolidArc(transform.position, Vector3.up, transform.forward, angleRange / 2, radius);
         Handles.DrawSolidArc(transform.position, Vector3.up, transform.forward, -angleRange / 2, radius);
     }
+#endif
 }
